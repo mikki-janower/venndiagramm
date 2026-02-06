@@ -5,7 +5,7 @@
 
 /*-----------------------------------------universal type styles--------------------*/
 body{
-   color:lightgoldenrodyellow;
+   color:#FFEB6B;
    text-shadow: 0px 0px 2px #000000;
    font-size:1em;
 }
@@ -19,7 +19,7 @@ h2{
     padding:6px;
 }
 a{
-    color: lightblue;
+    color: #6C8EFF;
 }
 /*---------------------------------------------------- background video---------------------------------*/
 .bg-container {
