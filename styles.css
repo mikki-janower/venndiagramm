@@ -4,15 +4,22 @@
 }
 
 /*-----------------------------------------universal type styles--------------------*/
+body{
+   color:lightgoldenrodyellow;
+   text-shadow: 0px 0px 2px #000000;
+   font-size:1em;
+}
 h1{
-    font-size:3em;
-    padding-bottom:0px;
+    font-size:3.2em;
+    margin-bottom:0px;
+    letter-spacing:-1;
 }
 h2{
+  font-size:1.8em;
     padding:6px;
 }
 a{
-    color:lightsalmon;
+    color: lightblue;
 }
 /*---------------------------------------------------- background video---------------------------------*/
 .bg-container {
@@ -46,11 +53,15 @@ a{
 /*--------------------------------------------------main content--------------------------------------*/
 .main{
     position:absolute;
-    color:white;
     width:100vw;
     text-align:center;
     top:50%;
     transform:translateY(-52%);
+}
+.main span{
+}
+.stockists{
+  margin-top:18px;
 }
 .description, .stockists{
     padding-bottom:12px;
