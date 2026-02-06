@@ -2,9 +2,9 @@ $(document).ready(function () {
 
 //--------------------------site plays random video on pageload 
 var videos = [
-    [{type:'mp4', 'src':'bg/bacteria_1.mp4'}],
-    [{type:'mp4', 'src':'bg/livingplanet_1.mp4'}],
-    [{type:'mp4', 'src':'bg/livingplanet_2.mp4'}]
+    [{type:'mp4', 'src':'assets/bg/bacteria_1.mp4'}],
+    [{type:'mp4', 'src':'assets/bg/livingplanet_1.mp4'}],
+    [{type:'mp4', 'src':'assets/bg/livingplanet_2.mp4'}]
 ];
 
 // selecting random item from array,you can make your own
@@ -40,6 +40,7 @@ function handler(e)
 newvideo(randomitem[0].src)
 
 }
+
 
 
 //-----------------------------document closing bracket; don't touch
