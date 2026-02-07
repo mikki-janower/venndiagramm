@@ -88,7 +88,7 @@ $(function() {
         $('#about').removeClass('active');
     });
 
-  const $panel = $('#about');
+ const $panel = $('#about');
   function centerPanel() {
   const w = $panel.outerWidth();
   const h = $panel.outerHeight();
