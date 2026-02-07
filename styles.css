@@ -98,8 +98,12 @@ h2{
   justify-content:space-around;
   padding: 10px 24px 10px 24px;
   font-size:16px;
-  line-height:1.2;
+  line-height:1.05;
+  text-transform:uppercase;
   background: var(--green);
+}
+.header span:nth-of-type(2){
+  margin-top:4px;
 }
 /* ====---------------== Panels ===----------------=== */.panel{
   padding: var(--gap);
@@ -149,18 +153,21 @@ h2{
   border-radius:120px;
   color:white;
   box-sizing:border-box;
+  font-family:'Times New Roman', Times, serif;
+  font-weight:550;
 }
 .sticker div{
   display:flex;
   align-items:center;
   text-align:center;
-  line-height:1.3;
+  line-height:1.1 !important;
+  letter-spacing:.2px;
+  font-weight:500;
   width:100%;
   height:100%;
   box-sizing: border-box;
   overflow:wrap;
   border-radius:120px;
-  font-family: cursive;
   border:1.2px black solid;
 }
 /*---------------left panel(s)------------*/
@@ -186,6 +193,7 @@ h2{
   grid-row:2;
   margin-top: var(--gap);
   width:100%;
+  height:auto;
   display: flex;
   flex-direction:row;
   flex-wrap:wrap;
@@ -217,15 +225,14 @@ h2{
 }
 .library.sticker div{
   text-align:left;
-  font-family:'Times New Roman', serif;
   color:#F5F5F5;
   padding:10px 0px 0px 12px;
   border-radius:0px;
   background:var(--blue);
 }
 .library h2{
-  font-weight:500;
   font-size:24px;
+  font-weight:550;
 }
 .opensource{
   padding:var(--half-gap);
@@ -338,18 +345,23 @@ h2{
   .header .sticker div{
     padding:var(--gap);
     border-radius:2px;
+    font-size:20px;
+    letter-spacing:1px;
+    width:100%;
+    flex-direction:row;
+    justify-content:space-between;
   }
   .header span{
-    width:100%;
     text-align:left;
   }
   .header span:nth-of-type(2){
-    display:none;
+    margin-top:-4px;
+    text-align:right;
   }
 }
 @media screen and (max-width: 500px){
 .header{
-  padding-right:20px;
+  padding-right:28px;
 }
 .header .sticker{
   top:154px;
