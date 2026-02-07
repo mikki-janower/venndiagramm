@@ -134,7 +134,6 @@ h2{
 }
 /*-------beveled panel------*/
 .raised{
-  margin:-1px;
   padding:18px 18px 18px 18px;
   border-radius:var(--half-gap);
   background: linear-gradient(
@@ -173,9 +172,9 @@ h2{
 /*---------------left panel(s)------------*/
 .sidebar{
   grid-column:1;
-}
-.gigs, .gif{
-  margin-top:var(--gap);
+  display:flex;
+  flex-direction:column;
+  gap:var(--gap);
 }
 .gif{
   padding:var(--half-gap);
@@ -293,15 +292,15 @@ h2{
   }
   /*-------rearrange sidebar-------*/
   .sidebar{
-    display:flex;
     flex-direction:row;
+    flex-wrap:wrap;
   }
-  .stockists, .gigs{
-    margin-right:10px;
-  }
-  .gigs, .gif{
-    margin-top:0;
-  }
+.gigs, .stockists{
+  flex-grow:1;
+}
+.gif{
+  display:none;
+}
 
   .footer-links{
     flex-direction:column;
@@ -314,22 +313,11 @@ h2{
 }
 
 @media screen and (max-width: 750px){
-.sidebar{
-  flex-wrap:wrap;
-  margin-top:72px;
-}
-.gigs, .stockists{
-  flex-grow:1;
-}
-.gigs{
-  margin-right:0;
-}
-.gif{
-  margin-top:14px;
-  width:100%;
-}
 .header{
   display:block;
+}
+.sidebar{
+  margin-top:72px;
 }
   .header .sticker{
     position:absolute;
@@ -369,10 +357,7 @@ h2{
 .sidebar{
   flex-direction:column;
 }
-  .gigs{
-    margin-top:var(--gap);
-  }
-  .stockists{
-    margin-right:0;
+  .header span:nth-of-type(2){
+    display:none;
   }
 }
