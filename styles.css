@@ -211,9 +211,9 @@ h2{
   padding: 8px 8px 12px 8px;
   margin-bottom:var(--gap);
 }
-.grid-item--width2 { width: 280px; }
-.grid-item--width3 { width: 420px; }
-.grid-item--width4 { width: 560px; }
+.grid-item--width2 { width: 290px; }
+.grid-item--width3 { width: 440px; }
+.grid-item--width4 { width: 590px; }
 
 .grid-item img{
   position:relative;
