@@ -301,7 +301,7 @@ h2{
 #about .content{
   border:var(--outline);
   padding:var(--gap);
-  background:white;
+  background:whitesmoke;
 }
 #about .content p{
   margin-bottom:12px;
@@ -318,7 +318,7 @@ h2{
   text-align:center;
   padding:4px 10px 6px 10px;
   border:var(--outline);
-  background:yellow;
+  background: whitesmoke;
 }
 /* ====== Footer ====== */
 .footer {
@@ -344,7 +344,7 @@ h2{
 }
 
 /*----------------------media queries-----------------------*/
-@media screen and (max-width: 850px){
+@media screen and (max-width: 890px){
     h1{
     font-size:58px;
   }
@@ -430,7 +430,7 @@ h2{
     max-height:60vh;
   }
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 540px){
 .header{
   padding-right:28px;
 }
