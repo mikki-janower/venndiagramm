@@ -2,76 +2,259 @@
   margin: 0;
   padding: 0;
 }
-
-/*-----------------------------------------universal type styles--------------------*/
-body{
-   color:#FFEB6B;
-   text-shadow: 0px 0px 4px #000000;
-   font-size:1em;
-   font-family:helvetica;
+:root {
+  --outline:1.2px solid black; 
+  --green:#177D3C;
+  --blue: #3B3EF2;
 }
+@font-face{
+  font-family:'Arial Rounded';
+  font-weight:600;
+  src:url('assets/fonts/Arial-Rounded-Bold.ttf');
+}
+
+/* ====== Global ====== */
+body {
+  height:100vh;
+  width:100vw;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Rounded';
+  line-height:1.25;
+  font-size:14px;
+}
+
+/*-----------------type styles---------------*/
 h1{
-    font-size:3.2em;
-    margin-bottom:0px;
-    letter-spacing:-1;
+  font-family:Helvetica, sans-serif;
+  font-weight:800;
+  letter-spacing:-1.5px;
+  color:red;
+  font-size:4.8rem;
+  font-weight:800;
+  line-height:.9;
+  margin:8px;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: black; 
+  text-stroke-width: 1.2px;
+  text-stroke-color: black;
 }
 h2{
-  font-size:1.8em;
-    padding:6px;
-}
-a{
-    color: #6C8EFF;
-}
-/*---------------------------------------------------- background video---------------------------------*/
-.bg-container {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1; 
+  padding-bottom:8px;
 }
 
-/* video element */
-.bg-container video {
-  width: 100vw;
-  height: 100vh; 
-  object-fit: cover; 
+/* ====== Body Layout ====== */
+.metal-body {
+  box-sizing:border-box;
+  padding:18px;
+  height:100%;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 120px auto 42px;
+  gap: 12px;
+  overflow-y:scroll;
+
+  background-repeat:no-repeat;
+  background:
+    linear-gradient(
+      180deg,
+      #f0f0f0,
+      #c8c8c8,
+      #b5b5b5,
+      #e0e0e0
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.04) 0px,
+      rgba(255,255,255,0.04) 1px,
+      rgba(0,0,0,0.04) 2px,
+      rgba(0,0,0,0.04) 3px
+    );
+}
+/* ====== Header ====== */
+.metal-header {
+  padding: 10px;
+  text-align: left;
+  grid-column:1/span 2;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  background: linear-gradient(
+    180deg,
+    #eaeaea,
+    #c8c8c8
+  );
+
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  border-top-left-radius:4px;
+  border-bottom-left-radius:4px;
+
+  box-shadow:
+    inset 4px 4px 3px rgba(255,255,255,0.85),
+    inset -4px -4px 3px rgba(0,0,0,0.5);
 }
 
-/* overlay for readability */
-.bg-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); 
-  z-index: 0; 
+.metal-header .sticker{
+  margin-right:6px;
+  width:200px;
+  height:100%;
+}
+.metal-header .sticker div{
+  padding-top:12px;
+  background: var(--green);
+}
+/* ====== Panels ====== */
+.metal-panel {
+  padding: 18px;
+  border-radius:4px;
+  overflow-y:scroll;
+  background: linear-gradient(
+    180deg,
+    #dcdcdc,
+    #bdbdbd
+  );
+
+  box-shadow:
+    inset -2px -2px 4px rgba(0,0,0,0.5),
+    inset 2px 2px 4px rgba(255,255,255,1);
+}
+/* Inset panel*/
+.inset {
+  padding:18px 18px 18px 18px;
+  background: linear-gradient(
+    180deg,
+    #d2d2d2,
+    #a8a8a8
+  );
+
+  box-shadow:
+    inset -3px -3px 5px rgba(255,255,255,0.85),
+    inset 3px 3px 5px rgba(0,0,0,0.5);
+}
+/*-------beveled-------*/
+.button-bevel{
+  margin:-1px;
+  padding:18px 18px 18px 18px;
+  border-radius:4px;
+  background: linear-gradient(
+    215deg,
+    #c5c5c5,
+    #d2d2d2
+  );
+
+  box-shadow:
+    inset 4px 4px 3px rgba(255,255,255,0.85),
+    inset -4px -4px 3px rgba(0,0,0,0.5);
+}
+/*---------stickers----------*/
+.sticker{
+  padding:4px;
+  border-radius:120px;
+  color:white;
+  box-sizing:border-box;
+}
+.sticker div{
+  text-align:center;
+  line-height:1.3;
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+  overflow:wrap;
+  border-radius:120px;
+  font-family: cursive;
+  border:1.2px black solid;
+}
+/*---------------left panel(s)------------*/
+.panel-left{
+  grid-column:1;
+}
+.gigs, .gif{
+  margin-top:12px;
+}
+.gif{
+  padding:4px;
+  height:200px;
+  overflow:hidden;
+}
+.gif img{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+/*------------------grid------------*/
+.grid{
+  grid-column:2/span 2;
+  border-top-right-radius: 60px;
+  grid-row:2;
+  margin-top:10px;
+  width:100%;
+  display: flex;
+  flex-direction:r0w;
+  flex-wrap:wrap;
+}
+.grid-item, .grid-item--width2{
+  text-align:center;
+}
+.grid h2{
+  padding-right:24px;
+}
+.grid-item{
+  box-sizing:border-box;
+  width:140px;
+  padding: 8px 8px 12px 8px;
+  margin-bottom:12px;
+}
+.grid-item img{
+  position:relative;
+  width:100%;
+  padding-bottom:4px;
+}
+.library.sticker{
+  border-radius:2px;
+}
+.library.sticker div{
+  text-align:left;
+  font-family:'Times New Roman', serif;
+  color:#F5F5F5;
+  padding:10px 0px 0px 12px;
+  border-radius:0px;
+  background:var(--blue);
+}
+.library h2{
+  font-weight:500;
+  font-size:24px;
+}
+/* ====== Footer ====== */
+.metal-footer {
+  border-radius:2px;
+  padding: 4px;
+  height:42px;
+  text-align: left;
+  grid-column:1/span 2;
+}
+.footer-links{
+  padding:10px 8px 8px 8px;
+  background:yellow;
+  border:1.2px black solid;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
 }
 
-/*--------------------------------------------------main content--------------------------------------*/
-.main{
-    position:absolute;
-    width:100vw;
-    text-align:center;
-    top:50%;
-    transform:translateY(-52%);
-}
-.main span{
-}
-.stockists{
-  margin-top:18px;
-}
-.description, .stockists{
-    padding-bottom:12px;
-}
-/*---------------------------------------------------footer-------------------------------------------*/
-.footer{
-    width:100vw;
-    position:fixed;
-    text-align:center;
-    vertical-align:bottom;
-    bottom:30px;
+/*----------------------media queries-----------------------*/
+@media screen and (max-width: 840px){
+  .metal-body{
+
+  }
+  h1{
+    font-size:48px;
+  }
+  .footer-links{
+    flex-direction:column;
+  }
+  .footer-links span:first-of-type{
+    margin-bottom:8px;
+  }
 }
