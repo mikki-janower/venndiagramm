@@ -86,8 +86,8 @@ h2{
     #c8c8c8
   );
 
-  border-top-right-radius: 60px;
-  border-bottom-right-radius: 60px;
+  border-top-right-radius: 120px;
+  border-bottom-right-radius: 120px;
   border-top-left-radius:4px;
   border-bottom-left-radius:4px;
 
@@ -102,8 +102,10 @@ h2{
   height:100%;
 }
 .metal-header .sticker div{
-  vertical-align:middle;
-  padding: 0px 20px 0px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  padding: 10px 20px 10px 20px;
   font-size:18px;
   line-height:1.2;
   background: var(--green);
@@ -124,6 +126,7 @@ h2{
 }
 /* Inset panel*/
 .inset {
+  box-sizing:border-box;
   padding:18px 18px 18px 18px;
   background: linear-gradient(
     180deg,
@@ -195,7 +198,7 @@ h2{
   margin-top:10px;
   width:100%;
   display: flex;
-  flex-direction:r0w;
+  flex-direction:row;
   flex-wrap:wrap;
 }
 .grid-item, .grid-item--width2{
@@ -271,7 +274,10 @@ h2{
 }
 
 /*----------------------media queries-----------------------*/
-@media screen and (max-width: 840px){
+@media screen and (max-width: 850px){
+    h1{
+    font-size:58px;
+  }
   .metal-body{
     display:flex;
     flex-direction:column;
@@ -280,9 +286,6 @@ h2{
     height:auto;
     z-index:100;
   }
-  .metal-header .sticker{
-    display:none;
-  }
  .metal-panel:has(.grid){
   padding:12px;
  }
@@ -290,9 +293,18 @@ h2{
     display:flex;
     flex-direction:column;
   }
-  h1{
-    font-size:48px;
+  /*-------rearrange sidebar-------*/
+  .panel-left{
+    display:flex;
+    flex-direction:row;
   }
+  .stockists, .gigs{
+    margin-right:10px;
+  }
+  .gigs, .gif{
+    margin-top:0;
+  }
+
   .metal-footer{
     height:84px;
   }
@@ -302,5 +314,65 @@ h2{
   .footer-links span:first-of-type{
     margin-top:8px;
     order:3;
+    text-align:center;
+  }
+}
+
+@media screen and (max-width: 750px){
+.panel-left{
+  flex-wrap:wrap;
+  margin-top:64px;
+}
+.gigs, .stockists{
+  flex-grow:1;
+}
+.gigs{
+  margin-right:0;
+}
+.gif{
+  margin-top:10px;
+  width:100%;
+}
+.metal-header{
+  display:block;
+}
+  .metal-header .sticker{
+    position:absolute;
+    box-sizing:border-box;
+    left:18px;
+    top:102px;
+    margin-top:12px;
+    height:60px;
+    width:calc(100% - 36px);
+    margin:16px 0px 0px 0px;
+    border-radius:4px;
+  }
+  .metal-header .sticker div{
+    padding:10px;
+    border-radius:2px;
+  }
+  .metal-header span{
+    width:100%;
+    text-align:left;
+  }
+  .metal-header span:nth-of-type(2){
+    display:none;
+  }
+}
+@media screen and (max-width: 500px){
+.metal-header{
+  padding-right:20px;
+}
+.metal-header .sticker{
+  top:152px;
+}
+.panel-left{
+  flex-direction:column;
+}
+  .gigs{
+    margin-top:10px;
+  }
+  .stockists{
+    margin-right:0;
   }
 }
