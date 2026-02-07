@@ -46,13 +46,12 @@ h2{
 /* ====== Body Layout ====== */
 .metal-body {
   box-sizing:border-box;
+  position:relative;
   padding:18px;
-  height:100%;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 120px auto 42px;
   gap: 12px;
-  overflow-y:scroll;
 
   background-repeat:no-repeat;
   background:
@@ -102,14 +101,15 @@ h2{
   height:100%;
 }
 .metal-header .sticker div{
+  font-size:18px;
   padding-top:12px;
+  line-height:1.2;
   background: var(--green);
 }
 /* ====== Panels ====== */
-.metal-panel {
-  padding: 18px;
+.metal-panel, .inset {
+  padding: 12px;
   border-radius:4px;
-  overflow-y:scroll;
   background: linear-gradient(
     180deg,
     #dcdcdc,
@@ -175,7 +175,7 @@ h2{
 }
 .gif{
   padding:4px;
-  height:200px;
+  height:auto;
   overflow:hidden;
 }
 .gif img{
@@ -201,11 +201,16 @@ h2{
   padding-right:24px;
 }
 .grid-item{
+  border-radius:2px;
   box-sizing:border-box;
   width:140px;
   padding: 8px 8px 12px 8px;
   margin-bottom:12px;
 }
+.grid-item--width2 { width: 280px; }
+.grid-item--width3 { width: 420px; }
+.grid-item--width4 { width: 560px; }
+
 .grid-item img{
   position:relative;
   width:100%;
@@ -225,6 +230,20 @@ h2{
 .library h2{
   font-weight:500;
   font-size:24px;
+}
+.opensource{
+  padding:4px;
+  border-radius:2px;
+  font-family:'Times New Roman';
+  line-height:1.1;
+  text-align:left;
+  font-size:16px;
+}
+.opensource div{
+  border:1.5px solid black;
+  background:white;
+  padding:10px;
+  box-sizing:border-box;
 }
 /* ====== Footer ====== */
 .metal-footer {
@@ -246,15 +265,34 @@ h2{
 /*----------------------media queries-----------------------*/
 @media screen and (max-width: 840px){
   .metal-body{
-
+    display:flex;
+    flex-direction:column;
+  }
+  .metal-header{
+    height:auto;
+    z-index:100;
+  }
+  .metal-header .sticker{
+    display:none;
+  }
+ .metal-panel:has(.grid){
+  padding:12px;
+ }
+  .grid{
+    display:flex;
+    flex-direction:column;
   }
   h1{
     font-size:48px;
+  }
+  .metal-footer{
+    height:84px;
   }
   .footer-links{
     flex-direction:column;
   }
   .footer-links span:first-of-type{
-    margin-bottom:8px;
+    margin-top:8px;
+    order:3;
   }
 }
