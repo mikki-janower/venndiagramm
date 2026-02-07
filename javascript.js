@@ -74,6 +74,31 @@ $(function () {
   });
 
 });
+/*-----------------'about' popup controls----------------*/
+$(function() {
+        $( "#about" ).draggable();
+    });
+ // Open the popup when the "Open Popup" button is clicked
+    $('.about-btn').on('click', function() {
+        $('#about').addClass('active');
+    });
 
+    // Close the popup when the "Close" button or the overlay is clicked
+    $('#close-popup-btn').on('click', function() {
+        $('#about').removeClass('active');
+    });
+
+  const $panel = $('#about');
+  function centerPanel() {
+  const w = $panel.outerWidth();
+  const h = $panel.outerHeight();
+
+  $panel.css({
+    left: `calc(50% - ${w / 2}px)`,
+    top:  `calc(50% - ${h / 2}px)`
+  });
+}
+
+centerPanel();
 //-----------------------------document closing bracket; don't touch
 });

@@ -186,6 +186,28 @@ h2{
   height:100%;
   overflow:hidden;
 }
+.header div:has(h1){
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
+  gap:var(--half-gap);
+}
+.about-btn{
+  border-radius:120px;
+  padding:4px;
+  cursor:pointer;
+}
+.about-btn div{
+  position:relative;
+  padding:5px 15px 5px 15px;
+  border-radius:120px;
+  border:var(--outline);
+  height:100%;
+  background:yellow;
+}
+.about-btn h2{
+  padding-bottom:0;
+}
 /*------------------grid------------*/
 .grid{
   grid-column:2/span 2;
@@ -246,6 +268,56 @@ h2{
   background:white;
   padding:10px;
   box-sizing:border-box;
+}
+/*---------------'about' popup----------------*/
+
+/* The actual popup box, centered on the screen */
+#about {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    filter: drop-shadow(4px 4px 8px rgba(0,0,0,.5));
+    padding:var(--gap);
+    width:60vw;
+    max-height:60vh;
+    overflow-y:scroll;
+    box-sizing:border-box;
+}
+
+/* CSS class to show the elements */
+.active {
+    display: block !important;
+}
+#about .nav{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+}
+#about .inset{
+  padding:var(--half-gap);
+}
+#about .content{
+  border:var(--outline);
+  padding:var(--gap);
+  background:white;
+}
+#about .content p{
+  margin-bottom:12px;
+}
+#about .content p:last-of-type{
+  margin-bottom:0px;
+}
+#close-popup-btn{
+  cursor:pointer;
+  padding:4px;
+  margin-bottom:var(--gap)
+}
+#close-popup-btn div{
+  text-align:center;
+  padding:4px 10px 6px 10px;
+  border:var(--outline);
+  background:yellow;
 }
 /* ====== Footer ====== */
 .footer {
@@ -346,6 +418,10 @@ h2{
     margin-top:-4px;
     text-align:right;
   }
+  #about{
+    width:84vw;
+    max-height:60vh;
+  }
 }
 @media screen and (max-width: 500px){
 .header{
@@ -360,4 +436,8 @@ h2{
   .header span:nth-of-type(2){
     display:none;
   }
+#about{
+  width:calc(100% - 36px);
+  max-height:80vh;
+}
 }
