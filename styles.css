@@ -206,9 +206,9 @@ h2{
 .grid-item{
   border-radius:2px;
   box-sizing:border-box;
-  width:140px;
   padding: 8px 8px 12px 8px;
   margin-bottom:var(--gap);
+  /*width:140px;*/
 }
 .grid-item--width2 { width: 290px; }
 .grid-item--width3 { width: 440px; }
