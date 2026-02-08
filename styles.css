@@ -41,7 +41,11 @@ h1{
 }
 h2{
   padding-bottom:8px;
+  font-size: 18px;
+
 }
+
+
 
 /* ====== Body Layout ====== */
 .metal-body {
@@ -224,6 +228,7 @@ h2{
     inset 4px 4px 3px rgba(255,255,255,0.85),
     inset -4px -4px 3px rgba(0,0,0,0.5);
 }
+
 /*---------stickers----------*/
 .sticker{
   padding:var(--half-gap);
@@ -254,6 +259,12 @@ h2{
   flex-direction:column;
   gap:var(--gap);
 }
+
+.sidebar h2{
+  color: green;
+}
+
+
 .gif{
   padding:var(--half-gap);
   height:auto;
