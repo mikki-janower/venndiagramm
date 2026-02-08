@@ -278,7 +278,7 @@ div:has(.grid){
   flex-direction:row;
   flex-wrap:wrap;
 }
-.grid-item, .grid-item--width2{
+.grid-item, .grid-item--2, .grid-item--3, .grid-item--4{
   text-align:center;
 }
 .grid h2{
@@ -289,11 +289,10 @@ div:has(.grid){
   box-sizing:border-box;
   padding: 8px 8px 12px 8px;
   margin-bottom:var(--gap);
-  /*width:140px;*/
 }
-.grid-item--width2 { width: 290px; }
-.grid-item--width3 { width: 440px; }
-.grid-item--width4 { width: 590px; }
+.grid-item--2 { height: auto; }
+.grid-item--3 { width: auto; }
+.grid-item--4 { width: auto; }
 
 .grid-item img{
   position:relative;
