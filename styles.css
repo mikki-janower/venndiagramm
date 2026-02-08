@@ -275,6 +275,29 @@ h2{
   height:100%;
   border:var(--outline);
 }
+
+.seasonsgreetings{
+  text-align: center;
+  line-height: 1.6;
+  color: black;
+
+}
+
+.seasonsgreetings span{
+  font-size: 13px;
+  font-weight: 500;
+  font-family: serif;
+  color: red;
+  background-color: pink;
+  font-weight: 550
+}
+
+
+.updated {
+  font-style: regular;
+  font-size: 9px;
+}
+
 /*------------------grid------------*/
 div:has(.grid){
   overflow-y:scroll;
