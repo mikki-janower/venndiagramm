@@ -88,15 +88,24 @@ $(function() {
         $('#about').removeClass('active');
     });
 
- const $panel = $('#about');
+//-------set the panel's position when it first appears without limiting its draggability
+const $panel = $('#about');
   function centerPanel() {
   const w = $panel.outerWidth();
   const h = $panel.outerHeight();
 
-  $panel.css({
+//centered onscreen
+ /* $panel.css({
     left: `calc(50% - ${w / 2}px)`,
     top:  `calc(50% - ${h / 2}px)`
+  });*/
+
+//bottom left corner
+  $panel.css({
+    left: '18px',
+    bottom:  `18px`
   });
+
 }
 
 centerPanel();
