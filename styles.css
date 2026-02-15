@@ -14,7 +14,9 @@
   font-weight:600;
   src:url('assets/fonts/Arial-Rounded-Bold.ttf');
 }
-
+*{
+  box-sizing:border-box;
+}
 /* ====== Global ====== */
 body {
   margin: 0;
@@ -52,7 +54,7 @@ h2{
   box-sizing:border-box;
   padding:18px;
   display: grid;
-  height:100vh !important;
+  height:100vh;
   grid-template-columns: 300px 1fr;
   grid-template-rows: auto 1fr auto;
   gap: var(--gap);
@@ -128,7 +130,7 @@ h2{
 }
 .about-btn div{
   position:relative;
-  padding:5px 15px 5px 15px;
+  padding:5px 14px 5px 14px;
   border-radius:120px;
   border:var(--outline);
   height:100%;
@@ -138,7 +140,7 @@ h2{
   padding-bottom:0;
 }
 
-/*---------------'about' popup----------------*/
+/*--------'about' popup-------*/
 #about {
     display: none;
     position: fixed;
@@ -378,7 +380,6 @@ div:has(.grid){
   flex-direction:row;
   justify-content:space-between;
   align-items:center;
-  height:auto;
 }
 .footer-links span:nth-of-type(3){
   padding-right:var(--half-gap);
@@ -420,6 +421,13 @@ div:has(.grid){
 .gigs, .stockists{
   flex-grow:1;
 }
+  .seasonsgreetings{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+  }
 .gif{
   display:none;
 }
@@ -490,5 +498,15 @@ div:has(.grid){
 #about{
   width:calc(100% - 36px);
   max-height:80vh;
+}
+  .seasonsgreetings{
+    width:100%;
+    display:block;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+  }
+.gif{
+  display:block;
 }
 }
