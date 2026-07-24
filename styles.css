@@ -52,7 +52,7 @@ h2{
   box-sizing:border-box;
   padding:18px;
   display: grid;
- /*height:100vh;*/
+  min-height:100vh;
   grid-template-columns: 300px 1fr;
   grid-template-rows: auto 1fr auto;
   gap: var(--gap);
