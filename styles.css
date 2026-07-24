@@ -52,7 +52,7 @@ h2{
   box-sizing:border-box;
   padding:18px;
   display: grid;
-  height:100vh;
+ /*height:100vh;*/
   grid-template-columns: 300px 1fr;
   grid-template-rows: auto 1fr auto;
   gap: var(--gap);
@@ -279,16 +279,14 @@ h2{
 .seasonsgreetings{
   text-align: center;
   line-height: 1.6;
-  color: black;
-
 }
 
 .seasonsgreetings span{
   font-size: 13px;
   font-weight: 500;
   font-family: serif;
-  color:orangered ;
-  background-color: maroon;
+  color: #98E7FF;
+  background-color: #4D722F;
   font-weight: 550
 }
 
